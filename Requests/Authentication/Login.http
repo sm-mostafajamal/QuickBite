@@ -1,0 +1,9 @@
+@url = http://localhost:5116/api
+
+POST {{ url }}/auth/login
+Content-Type: application/json
+
+{
+    "email" : "sm.mostafa@softrobotics.com.bd",
+    "password" : "12345678"
+}

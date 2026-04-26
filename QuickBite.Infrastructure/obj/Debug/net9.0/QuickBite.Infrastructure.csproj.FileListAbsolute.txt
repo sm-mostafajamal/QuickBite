@@ -1,0 +1,17 @@
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\bin\Debug\net9.0\QuickBite.Infrastructure.deps.json
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\bin\Debug\net9.0\QuickBite.Infrastructure.dll
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\bin\Debug\net9.0\QuickBite.Infrastructure.pdb
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\bin\Debug\net9.0\QuickBite.Application.dll
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\bin\Debug\net9.0\QuickBite.Domain.dll
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\bin\Debug\net9.0\QuickBite.Application.pdb
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\bin\Debug\net9.0\QuickBite.Domain.pdb
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\QuickBite.Infrastructure.csproj.AssemblyReference.cache
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\QuickBite.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\QuickBite.Infrastructure.AssemblyInfoInputs.cache
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\QuickBite.Infrastructure.AssemblyInfo.cs
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\QuickBite.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\QuickBit.D3452061.Up2Date
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\QuickBite.Infrastructure.dll
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\refint\QuickBite.Infrastructure.dll
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\QuickBite.Infrastructure.pdb
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\ref\QuickBite.Infrastructure.dll
