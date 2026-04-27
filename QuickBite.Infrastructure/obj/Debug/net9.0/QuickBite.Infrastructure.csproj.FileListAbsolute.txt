@@ -15,3 +15,4 @@ D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\QuickBite.Inf
 D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\refint\QuickBite.Infrastructure.dll
 D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\QuickBite.Infrastructure.pdb
 D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\ref\QuickBite.Infrastructure.dll
+D:\Folder\Test\QuickBite\QuickBite.Infrastructure\obj\Debug\net9.0\QuickBite.Infrastructure.sourcelink.json

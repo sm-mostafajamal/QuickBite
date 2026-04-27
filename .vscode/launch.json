@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        // ── LAUNCH: starts the app + debugger together ──
+        // Uses your existing launchSettings.json (ports 7170 / 5116)
+        {
+            "name": "🚀 Launch QuickBite API",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/QuickBite.API/bin/Debug/net9.0/QuickBite.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/QuickBite.API",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+                // ports are read from launchSettings.json automatically
+                // https://localhost:7170  |  http://localhost:5116
+            },
+            "justMyCode": true,
+            "enableStepFiltering": true
+        },
+
+        // ── ATTACH: run app manually in terminal, then attach ──
+        // Step 1: cd QuickBite.API && dotnet run
+        // Step 2: F5 → pick this config → search "QuickBite"
+        {
+            "name": "🔗 Attach to QuickBite (pick from list)",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}",
+            "justMyCode": true,
+            "enableStepFiltering": true
+        },
+
+        // ── ATTACH by PID: fastest, no popup ──
+        // Step 1: dotnet run in terminal
+        // Step 2: tasklist | findstr dotnet  → get the PID
+        // Step 3: replace 0 below with your PID → F5
+        {
+            "name": "🔗 Attach by PID (no popup)",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": 0,           // ← paste your dotnet PID here
+            "justMyCode": true
+        }
+    ]
+}

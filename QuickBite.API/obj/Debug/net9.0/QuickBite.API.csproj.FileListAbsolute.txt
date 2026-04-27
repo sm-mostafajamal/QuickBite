@@ -51,3 +51,4 @@ D:\Folder\Test\QuickBite\QuickBite.API\bin\Debug\net9.0\Microsoft.Extensions.Con
 D:\Folder\Test\QuickBite\QuickBite.API\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
 D:\Folder\Test\QuickBite\QuickBite.API\bin\Debug\net9.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 D:\Folder\Test\QuickBite\QuickBite.API\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+D:\Folder\Test\QuickBite\QuickBite.API\obj\Debug\net9.0\QuickBite.API.sourcelink.json

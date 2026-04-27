@@ -9,3 +9,4 @@ D:\Folder\Test\QuickBite\QuickBite.Contracts\obj\Debug\net9.0\QuickBite.Contract
 D:\Folder\Test\QuickBite\QuickBite.Contracts\obj\Debug\net9.0\refint\QuickBite.Contracts.dll
 D:\Folder\Test\QuickBite\QuickBite.Contracts\obj\Debug\net9.0\QuickBite.Contracts.pdb
 D:\Folder\Test\QuickBite\QuickBite.Contracts\obj\Debug\net9.0\ref\QuickBite.Contracts.dll
+D:\Folder\Test\QuickBite\QuickBite.Contracts\obj\Debug\net9.0\QuickBite.Contracts.sourcelink.json

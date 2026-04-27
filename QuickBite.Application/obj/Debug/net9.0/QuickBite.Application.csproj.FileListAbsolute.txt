@@ -13,3 +13,4 @@ D:\Folder\Test\QuickBite\QuickBite.Application\obj\Debug\net9.0\QuickBite.Applic
 D:\Folder\Test\QuickBite\QuickBite.Application\obj\Debug\net9.0\refint\QuickBite.Application.dll
 D:\Folder\Test\QuickBite\QuickBite.Application\obj\Debug\net9.0\QuickBite.Application.pdb
 D:\Folder\Test\QuickBite\QuickBite.Application\obj\Debug\net9.0\ref\QuickBite.Application.dll
+D:\Folder\Test\QuickBite\QuickBite.Application\obj\Debug\net9.0\QuickBite.Application.sourcelink.json

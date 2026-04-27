@@ -9,3 +9,4 @@ D:\Folder\Test\QuickBite\QuickBite.Domain\obj\Debug\net9.0\QuickBite.Domain.dll
 D:\Folder\Test\QuickBite\QuickBite.Domain\obj\Debug\net9.0\refint\QuickBite.Domain.dll
 D:\Folder\Test\QuickBite\QuickBite.Domain\obj\Debug\net9.0\QuickBite.Domain.pdb
 D:\Folder\Test\QuickBite\QuickBite.Domain\obj\Debug\net9.0\ref\QuickBite.Domain.dll
+D:\Folder\Test\QuickBite\QuickBite.Domain\obj\Debug\net9.0\QuickBite.Domain.sourcelink.json
