@@ -4,6 +4,6 @@ POST {{ url }}/auth/login
 Content-Type: application/json
 
 {
-    "email" : "sm.mostafa@softrobotics.com",
+    "email" : "sm.mostafa@softrobotics.",
     "password" : "12345678"
 }
