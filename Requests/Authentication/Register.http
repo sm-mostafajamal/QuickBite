@@ -1,0 +1,12 @@
+@url = https://localhost:7170/api
+
+
+POST {{ url }}/auth/register
+Content-Type: application/json
+
+{
+    "firstName" : "Mostafa",
+    "lastName" : "Jamal",
+    "email" : "sm.mostafa@softrobotics.com.bd",
+    "password" : "12345678"
+}
