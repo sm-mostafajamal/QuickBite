@@ -12,7 +12,7 @@ public class UserRepository : IUserRepository
         _users.Add(user);
     }
  
-    public User? GetUserByEmail(string email)
+    public User? GetUserByEmail(string email, CancellationToken cancellationToken)
     {
         return _users.FirstOrDefault(u => u.Email == email);
     }

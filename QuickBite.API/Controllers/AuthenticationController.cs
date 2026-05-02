@@ -1,5 +1,7 @@
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using QuickBite.Application.Services.Authentication;
+using QuickBite.Application.Features.Authentication.Commands.Login;
+using QuickBite.Application.Features.Authentication.Commands.Register;
 using QuickBite.Contracts.Authentication;
 using LoginRequest = QuickBite.Contracts.Authentication.LoginRequest;
 using RegisterRequest = QuickBite.Contracts.Authentication.RegisterRequest;
@@ -8,20 +10,12 @@ namespace QuickBite.API.Controllers;
     
 [ApiController]
 [Route("api/auth/")]
-public class AuthenticationController : ControllerBase
+public class AuthenticationController(ISender sender) : ControllerBase
 {
-    private readonly IAuthenticationService _authenticationService;
-
-    public AuthenticationController(IAuthenticationService authenticationService)
-    {
-        _authenticationService = authenticationService;
-    }
-
-
     [HttpPost("register")]
-    public IActionResult Register(RegisterRequest request)
+    public async Task<IActionResult> Register(RegisterRequest request)
     {
-        var authResult = this._authenticationService.Register(request.FirstName, request.LastName, request.Email, request.Password);
+        var authResult = await sender.Send(new RegisterCommand(request.FirstName, request.LastName, request.Email, request.Password));
 
         var response = new AuthenticationResponse(
             authResult.user.Id, 
@@ -35,9 +29,10 @@ public class AuthenticationController : ControllerBase
     }
 
     [HttpPost("login")]
-    public IActionResult Login(LoginRequest request)
+    public async Task<IActionResult> Login(LoginRequest request)
     {
-        var authResult = this._authenticationService.Login(request.Email, request.Password);
+        var authResult = await sender.Send(new LoginCommand(request.Email, request.Password));
+
         var response = new AuthenticationResponse(
             authResult.user.Id, 
             authResult.user.FirstName, 
