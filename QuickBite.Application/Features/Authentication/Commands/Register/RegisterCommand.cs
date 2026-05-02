@@ -1,23 +1,26 @@
+using ErrorOr;
 using MediatR;
 using QuickBite.Application.Common.interfaces.Authentication;
 using QuickBite.Application.Common.Interfaces.Persistence;
 using QuickBite.Application.Features.Authentication.CommonDTOs;
+using QuickBite.Domain.Common.Errors;
 using QuickBite.Domain.Entities;
 
 namespace QuickBite.Application.Features.Authentication.Commands.Register;
 
-public record RegisterCommand(string FirstName, string LastName, string Email, string Password) : IRequest<AuthenticationResult>;
+public record RegisterCommand(string FirstName, string LastName, string Email, string Password) : IRequest<ErrorOr<AuthenticationResult>>;
 
 
-public class RegisterCommandHandler(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository) : IRequestHandler<RegisterCommand, AuthenticationResult>
+public class RegisterCommandHandler(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository) 
+: IRequestHandler<RegisterCommand, ErrorOr<AuthenticationResult>>
 {
-    public async Task<AuthenticationResult> Handle(RegisterCommand command, CancellationToken cancellationToken)
+    public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command, CancellationToken cancellationToken)
     {
         var user = userRepository.GetUserByEmail(command.Email, cancellationToken);
         
-         if(user is not null)
+        if(user is not null)
         {
-            throw new Exception("User already exists!");
+            return Errors.User.DuplicateEmail;
         }
 
         user = new User
