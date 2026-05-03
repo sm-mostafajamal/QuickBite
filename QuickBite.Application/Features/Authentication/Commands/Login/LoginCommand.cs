@@ -30,7 +30,10 @@ public class LoginCommandHandler(IJwtTokenGenerator jwtTokenGenerator, IUserRepo
         var token = jwtTokenGenerator.GenerateToken(user);
 
         return new AuthenticationResult(
-            user,
+            user.Id,
+            user.FirstName,
+            user.LastName,
+            user.Email,
             token
         );             
     }
