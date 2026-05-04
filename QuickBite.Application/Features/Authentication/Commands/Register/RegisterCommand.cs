@@ -35,10 +35,7 @@ public class RegisterCommandHandler(IJwtTokenGenerator jwtTokenGenerator, IUserR
         var token = jwtTokenGenerator.GenerateToken(user);
 
         return new AuthenticationResult(
-            user.Id,
-            user.FirstName,
-            user.LastName,
-            user.Email, 
+            user, 
             token
         );
     }

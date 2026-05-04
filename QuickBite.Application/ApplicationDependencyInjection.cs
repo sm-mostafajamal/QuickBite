@@ -7,12 +7,12 @@ using Microsoft.Extensions.DependencyInjection;
 namespace QuickBite.Application;
 
 
-public static class DependencyInjection
+public static class ApplicationDependencyInjection
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
         AddMapster(services);
-        services.AddMediatR(typeof(DependencyInjection).Assembly);
+        services.AddMediatR(typeof(ApplicationDependencyInjection).Assembly);
         
         return services;
     }
@@ -20,7 +20,7 @@ public static class DependencyInjection
     private static void AddMapster(IServiceCollection services)
     {
         var config = TypeAdapterConfig.GlobalSettings;
-        config.Scan(Assembly.GetExecutingAssembly());
+        config.Scan(typeof(ApplicationDependencyInjection).Assembly);
 
         services.AddSingleton(config);
         services.AddScoped<IMapper, ServiceMapper>();
