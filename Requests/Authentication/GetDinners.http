@@ -1,0 +1,5 @@
+@url = https://localhost:7170/api
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmOGZmOTRlNy1lNDJlLTRhN2EtYTYyZS01OTFlMDFmYTY0YTUiLCJnaXZlbl9uYW1lIjoiTW9zdGFmYSIsImZhbWlseV9uYW1lIjoiSmFtYWwiLCJqdGkiOiJmZjc0MGE2ZC1hYjVmLTQ5MDAtYmIzNi02OWNlYTBmMzg0N2EiLCJleHAiOjE3NzgwODg2NDMsImlzcyI6IlF1aWNrQml0ZSIsImF1ZCI6IlF1aWNrQml0ZSJ9.i706LOp-X9OVtZBO_4cqZn8Kzm1gDiHnnd_SJM3dJ5k
+
+GET {{url}}/dinners
+Authorization: Bearer {{token}}

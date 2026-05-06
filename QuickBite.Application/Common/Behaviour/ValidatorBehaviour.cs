@@ -4,7 +4,7 @@ using ErrorOr;
 using FluentValidation;
 using MediatR;
 
-public class ValidatorBehaviour<TRequest, TResponse>(IValidator<TRequest> validator)
+public class ValidatorBehaviour<TRequest, TResponse>(IValidator<TRequest>? validator = null)
     : IPipelineBehavior<TRequest, TResponse> 
     where TRequest : IRequest<TResponse>
     where TResponse : IErrorOr

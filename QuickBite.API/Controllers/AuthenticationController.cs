@@ -3,6 +3,7 @@ namespace QuickBite.API.Controllers;
 using Mapster;
 using MapsterMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QuickBite.Application.Features.Authentication.Commands.Login;
 using QuickBite.Application.Features.Authentication.Commands.Register;
@@ -10,6 +11,7 @@ using QuickBite.Application.Features.Authentication.CommonDTOs;
 using QuickBite.Contracts.Authentication;
 
 [Route("api/auth/")]
+[AllowAnonymous]
 public class AuthenticationController(ISender sender, IMapper mapper) : ApiController
 {
     [HttpPost("register")]

@@ -1,29 +1,36 @@
 namespace QuickBite.API.Controllers;
 
 using ErrorOr;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using QuickBite.Domain.Common.Errors;
 
 [ApiController]
+[Authorize]
 public class ApiController : ControllerBase
 {
     [HttpGet("problem")]
     public IActionResult Problem(List<Error> errors)
     {
-        if(errors.All(error => error.Type == ErrorType.Validation))
+        if(errors.All(error => error.Type == ErrorType.Validation)) return ValidationProblem(errors);  
+
+        return Problem(errors[0]);
+    }
+
+    private IActionResult ValidationProblem(List<Error> errors)
+    {
+        var modelStateDictionary = new ModelStateDictionary();
+
+        foreach (var err in errors)
         {
-            var modelStateDictionary = new ModelStateDictionary();
-
-            foreach (var err in errors)
-            {
-                modelStateDictionary.AddModelError(err.Code, err.Description);
-            }
-
-            return ValidationProblem(modelStateDictionary);
+            modelStateDictionary.AddModelError(err.Code, err.Description);
         }
 
-        var error = errors[0];
+        return ValidationProblem(modelStateDictionary);
+    }
+
+    private IActionResult Problem(Error error)
+    {
         var statusCode = error.Type switch
         {
             ErrorType.Failure => StatusCodes.Status400BadRequest,

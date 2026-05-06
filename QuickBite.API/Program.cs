@@ -11,6 +11,8 @@ builder.Services.AddPresentation()
 var app = builder.Build();
 
 app.UseExceptionHandler("/api/error");
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseHttpsRedirection();
 app.MapControllers();
 app.Run();
