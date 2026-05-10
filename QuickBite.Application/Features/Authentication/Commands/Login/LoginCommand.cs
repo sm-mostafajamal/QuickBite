@@ -4,6 +4,7 @@ using ErrorOr;
 using MediatR;
 using QuickBite.Application.Common.interfaces.Authentication;
 using QuickBite.Application.Common.Interfaces.Persistence;
+using QuickBite.Application.Common.Interfaces.Persistence.Repositories;
 using QuickBite.Application.Features.Authentication.CommonDTOs;
 using QuickBite.Domain.Common.Errors;
 

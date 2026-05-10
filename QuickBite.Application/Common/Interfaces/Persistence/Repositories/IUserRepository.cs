@@ -1,6 +1,6 @@
 using QuickBite.Domain.Entities;
 
-namespace QuickBite.Application.Common.Interfaces.Persistence;
+namespace QuickBite.Application.Common.Interfaces.Persistence.Repositories;
 
 public interface IUserRepository
 {

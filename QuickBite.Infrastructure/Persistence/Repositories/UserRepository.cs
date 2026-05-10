@@ -1,7 +1,8 @@
 using QuickBite.Domain.Entities;
 using QuickBite.Application.Common.Interfaces.Persistence;
+using QuickBite.Application.Common.Interfaces.Persistence.Repositories;
 
-namespace QuickBite.Infrastructure.Persistence;
+namespace QuickBite.Infrastructure.Persistence.Repositories;
 
 public class UserRepository : IUserRepository
 {

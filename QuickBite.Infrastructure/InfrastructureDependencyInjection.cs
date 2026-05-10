@@ -1,12 +1,14 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using QuickBite.Application.Common.interfaces.Authentication;
-using QuickBite.Application.Common.Interfaces.Persistence;
+using QuickBite.Application.Common.Interfaces.Persistence.Repositories;
 using QuickBite.Infrastructure.Authentication;
 using QuickBite.Infrastructure.Persistence;
+using QuickBite.Infrastructure.Persistence.Repositories;
 
 namespace QuickBite.Infrastructure;
 
@@ -16,6 +18,14 @@ public static class InfrastructureDependencyInjection
     {          
         services.AddSingleton<IUserRepository, UserRepository>();
         services.AddAuth(configuration);
+
+        services.AddDbContext<QuickBiteDbContext>(options => {
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            options.UseMySql(connectionString, 
+            new MySqlServerVersion(new Version(8, 0, 0))
+            // ServerVersion.AutoDetect(connectionString)
+            );
+        });
         
         return services;
     }
@@ -37,14 +47,12 @@ public static class InfrastructureDependencyInjection
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
 
-                        ValidIssuer = jwtSettings.Issuer,
-                        ValidAudience = jwtSettings.Audience,
+                        ValidIssuer = jwtSettings?.Issuer,
+                        ValidAudience = jwtSettings?.Audience,
                         IssuerSigningKey = new SymmetricSecurityKey(
                             Encoding.UTF8.GetBytes(jwtSettings.SecretKey))
                    }; 
                 });
-
-
 
         return services;
     }

@@ -1,4 +1,5 @@
-@url = http://localhost:5116/api
+@url = https://localhost:7170/api
+
 
 POST {{ url }}/auth/login
 Content-Type: application/json
